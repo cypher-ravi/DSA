@@ -27,9 +27,10 @@ int main()
   scanf("%d",&search);
 
 
-  first = 0;
-  last = n - 1;
-  middle = (first+last)/2;
+  first = 0;//initialize first value to be 0
+  last = n-1;//n-1 is done because array index is started from 0 so if n=4 index is 0,1,2,3
+  middle = (first + last)/2;//calculate middle element
+
 
   while (first <= last)
   {
