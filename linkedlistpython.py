@@ -92,6 +92,22 @@ class LinkedList:
                 
             itr = itr.next
             count += 1
+            
+     def insert_after_value(self,data_after,data_to_insert):
+        if self.head == None:
+            return
+        
+        if self.head.data == data_after:
+            self.head.next = Node(data_to_insert,self.head.next)
+            return
+        
+        itr = self.head
+        while itr:
+            if itr.data == data_after:
+                itr.next = Node(data_to_insert,itr.next)
+                break
+        
+            itr = itr.next
 ll = LinkedList()
 
 ll.insert_values(["Banana","mango","Apple","Orange"])
